@@ -3,19 +3,22 @@ package ru.netology.manager;
 import ru.netology.domain.Player;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Game {
 
-    ArrayList<Player> players = new ArrayList<>();
+    HashMap<String, Player> players = new HashMap<>();
 
-    public void register(Player player) {
-        players.add(player);
+    public void register(String nik, Player player) {
+        players.put(nik, player);
     }
 
     public Player findByName(String name) {
-        for (Player player : players) {
-            if (player.getName() == name) {
-                return player;
+
+        for (String key : players.keySet()) {
+            Player value = players.get(key);
+            if (value.getName() == name) {
+                return value;
             }
         }
         return null;
