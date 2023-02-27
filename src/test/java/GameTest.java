@@ -15,9 +15,9 @@ public class GameTest {
 
     @BeforeEach
     public void setup() {
-        players.register("nik1", player1);
-        players.register("nik2", player2);
-        players.register("nik3", player3);
+        players.register("Petya", player1);
+        players.register("Vasya", player2);
+        players.register("Nastya", player3);
     }
 
     @Test
